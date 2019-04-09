@@ -1,0 +1,9 @@
+<html>
+<body>
+    <ul>
+    <% @users.each do |ele| %>
+        <li>Name: <%= ele.name %> | House: <%= ele.house %> | Project:<%= ele.project %></li>
+    <% end %>
+</ul>
+</body>
+</html>
