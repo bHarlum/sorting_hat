@@ -1,0 +1,9 @@
+<html>
+    <p>Name: <%= @user[:name] %> | Project: <%= @user[:project] %> | House: <%= @user[:house] %> </p>
+    <%if((@user[:id] - 1) > 0)%>
+        <%= link_to 'Previous page', "#{@user[:id]-1}", class: 'button alt' %>
+    <%end%>
+    <%if(@user[:id] < @users.length)%>
+        <%= link_to 'Next page', "#{@user[:id]+1}", class: 'button alt' %>
+    <%end%>
+</html>
