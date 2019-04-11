@@ -1,0 +1,10 @@
+<html>
+    <h2>The Sorting App.</h2>
+    <%= image_tag "hat-pic.png", class: "hat-image" %>
+    <%= form_with(url: "/users", method: :get) do %>
+        <%= label_tag(:query, "Search for:") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Filter") %>
+    <% end %>
+    <%= submit_tag("New Project") %>
+</html>

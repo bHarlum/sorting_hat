@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+    def home
+        
+    end
+
     def index
         if params[:query]
             @users = User.where(project: params[:query])
