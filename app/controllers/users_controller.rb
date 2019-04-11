@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
     def index
-        @users = (User.all)
+        if params[:query]
+            @users = User.where(project: params[:query])
+        else
+            @users = (User.all)
+        end
     end
     def create
         n_user = User.new

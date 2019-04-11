@@ -1,8 +1,16 @@
 <html>
 <body>
+    <%= form_with(url: "/users", method: :get) do %>
+        <%= label_tag(:query, "Search for:") %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Filter") %>
+    <% end %>
+
     <ul>
     <% @users.each do |ele| %>
-        <li>Name: <%= ele.name %> | House: <%= ele.house %> | Project:<%= ele.project %></li>
+        <ul>
+            <li>Name: <%= ele.name %> | House: <%= ele.house %> | Project:<%= ele.project %></li>
+        </ul>
     <% end %>
 </ul>
 </body>
